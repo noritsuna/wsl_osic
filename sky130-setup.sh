@@ -33,6 +33,15 @@ if [ ! -d "$HOME/.klayout" ]; then
 	mkdir $HOME/.klayout/libraries
 fi
 
+# Delete previous PDK
+# ---------------------------------------------
+if [ -d "$PDK_ROOT" ]; then
+	echo ">>>> Delete previous PDK"
+	sudo rm -rf "$PDK_ROOT"
+	sudo mkdir "$PDK_ROOT"
+	sudo chown "$USER:staff" "$PDK_ROOT"
+fi
+
 # Install GDSfactory and PDK
 # -----------------------------------
 # pip install gdsfactory
