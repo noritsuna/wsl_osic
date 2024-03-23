@@ -81,16 +81,14 @@ sudo apt -qq install -y build-essential python3-pip
 # Create PDK directory if it does not yet exist
 # ---------------------------------------------
 if [ -d "$PDK_ROOT" ]; then
-	echo ">>>> Delete previous PDK"
-	sudo rm -rf $PDK_ROOT
+	sudo mkdir "$PDK_ROOT"
+	sudo chown "$USER:staff" "$PDK_ROOT"
+	cd "$PDK_ROOT" || exit
 fi
 
 # Install PDK
 # ---------------------------------------------
-echo ">>>> Installing PDK"
-sudo mkdir "$PDK_ROOT"
-sudo chown "$USER:staff" "$PDK_ROOT"
-cd "$PDK_ROOT" || exit
+echo ">>>> Installing Volare"
 if [ ! -d "$SRC_DIR/volare" ]; then
 	git clone https://github.com/efabless/volare.git "$SRC_DIR/volare"
 	cd "$SRC_DIR/volare" || exit
