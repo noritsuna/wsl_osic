@@ -596,7 +596,7 @@ M_i_1_0 VDD Z_neg Z VNW pfet_05v0 W=1.22e-06 L=5e-07
 
 .SUBCKT gf180mcu_fd_sc_mcu7t5v0__antenna I VDD VNW VPW VSS
 D0 VPW I diode_nd2ps_06v0 A=0.2052p P=1.86u
-* D1 I VNW diode_pd2nw_06v0 A=0.2052p P=1.86u
+D1 I VNW diode_pd2nw_06v0 A=0.2052p P=1.86u
 .ENDS
 
 
