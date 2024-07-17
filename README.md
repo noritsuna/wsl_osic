@@ -1,6 +1,6 @@
 # wsl_osic
 
-SKY130 or GF180MCU development tools for Ubuntu 22 (WSL2)
+SKY130 / GF180MCU / OpenRule1umPDK development tools for Ubuntu 22 (WSL2)
 
   1. Run `tool-install.sh`
 ```
@@ -57,3 +57,21 @@ Under construction...
 
 * Add DRC/LVS/PEX menu
   * Magic LVS cannot recognize V5_XTOR therefore menu replaces "05v0" with "06v0" in source netlist
+
+## OpenRule1umPDK
+  4. Run `or1pdk-setup.sh`
+  5. Enjoy!
+#### Uninstall or change the PDK
+  6. If you want to change the PDK, run `uninstall.sh`
+  7. Delete pip packages: `gdsfactory`.
+     pip-autoremove might be useful:
+```
+pip-autoremove gdsfactory
+```
+  8. Now you can change the PDK
+
+#### Differences between Standard PDK
+
+Under construction...
+
+* Xschem Libraries
