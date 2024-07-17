@@ -58,7 +58,7 @@ Under construction...
 * Add DRC/LVS/PEX menu
   * Magic LVS cannot recognize V5_XTOR therefore menu replaces "05v0" with "06v0" in source netlist
 
-## OpenRule1umPDK
+## OpenRule1umPDK (PTS06)
   4. Run `or1pdk-setup.sh`
   5. Enjoy!
 #### Uninstall or change the PDK
